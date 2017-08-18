@@ -1,0 +1,23 @@
+extends layout
+
+block downloader
+    div#downloader_application
+                    h4 Please select your files
+                    form#download_form(action="#")
+                      fieldset.fieldset
+                        field.field
+                          input.checkbox#cb1(type="checkbox" data-url="https://stuk.github.io/jszip/test/ref/complex_files/Franz Kafka - The Metamorphosis.epub" checked)
+                          label.checkbox__label(for='cb1') Basic Training
+                        field.field
+                          input.checkbox#cb2(type="checkbox" data-url="https://stuk.github.io/jszip/documentation/css/pygments.css" checked)
+                          label.checkbox__label(for='cb2') Intermediate Training 
+                        field.field
+                          input.checkbox#cb3(type="checkbox" data-url="https://stuk.github.io/jszip/dist/jszip.js") 
+                          label.checkbox__label(for='cb3') Advanced Training 
+                        field.field
+                          input.checkbox#cb4(type="checkbox" data-url="https://stuk.github.io/jszip/test/ref/all.zip") 
+                          label.checkbox__label(for='cb4') Grab all  
+                      button.btn.btn-primary(type="submit") Pack 'em !
+                    div#progress_bar
+                      div.progress-bar(role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; height:30px;")
+                    p.hide#result

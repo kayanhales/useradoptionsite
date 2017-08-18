@@ -1,0 +1,126 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title User Adoption | Dynatrace
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon', href='//assets.dynatrace.com/groundhog/v1.0.0/assets/images/favicon.ico')
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='//assets.dynatrace.com/groundhog/v1.0.0/css/main.css', charset='utf-8')
+    link(rel='stylesheet', href='//assets.dynatrace.com/groundhog/v1.0.0/css/base/fonts.css', charset='utf-8')
+    link(rel='stylesheet', href='//assets.dynatrace.com/groundhog/v1.0.0/assets/style/syntax.css', charset='utf-8')
+    link(rel='stylesheet', href='//assets.dynatrace.com/groundhog/v1.0.0/assets/style/site.css', charset='utf-8')
+    meta(name='robots', content='index, follow')
+    link(rel='canonical', href='http://groundhog.dynalabs.io/doc/layouts/nested-islands/')
+    meta(property='og:url', content='http://groundhog.dynalabs.io/doc/layouts/nested-islands')
+    meta(property='og:title', content='Nested Islands | Groundhog')
+    meta(property='og:site_name', content='Dynatrace Groundhog CSS')
+    meta(property='og:locale', content='en_US')
+    meta(property='og:type', content='website')
+    meta(property='og:image', content='http://groundhog.dynalabs.io/assets/images/meta/groundhog-opengraph.png')
+    meta(property='og:image:width', content='800')
+    meta(property='og:image:height', content='420')
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:site', content='@dynatrace')
+    meta(name='twitter:title', content='Nested Islands | Groundhog')
+    meta(name='twitter:image', content='http://groundhog.dynalabs.io/assets/images/meta/groundhog-opengraph.png')
+  body.theme--purple
+    .nav.has-no-secondary
+      a.nav__brand(href='/')
+        img.nav__logo(src='http://assets.dynatrace.com/global/logos/dynatrace-logo.svg', alt='dynatrace logo')
+      .nav__buttongroup
+        a.nav__btn.nav__btn--cta(href='https://github.com/Dynatrace/css-groundhog') Find me on GitHub
+        button#menu-toggle.nav__btn--menutoggle.nav__btn(data-target='#nav-bar') Menu
+      nav#nav-bar.nav__bar.js-nav-toggle
+        ul.nav__list.nav__list--primary
+          li.nav__item
+            a.nav__link(href='/doc/components/') DXS
+          li.nav__item
+            a.nav__link(href='/doc/layouts/') Service Plans
+          li.nav__item
+            a.nav__link(href='/doc/test-pages/') User Adoption Plans
+          li.nav__item
+            a.nav__link(href='/doc/showcase/') Dynatrace
+    ul.breadcrumbs
+      li.breadcrumbs__item
+        a.breadcrumbs__link(href='/') Home
+      li.breadcrumbs__item
+        a.breadcrumbs__link(href='/doc/layouts/') Service Plans
+      li.breadcrumbs__item
+        span.breadcrumbs__last User Adoption
+    .layout.is-flex.has-islands
+      .layout__container.layout--half
+        .island
+          h1 User Adoption Plan
+          p Choose a service plan, or choose add-ons down below.
+          h3 Express
+            //button.btn.btn-primary(onclick='toggleIt()') Choose files
+          button.btn.btn--secondary(data-toggle="dropdown" data-target="#expressFiles") Choose Files
+            //downloader app. Add your file names and the file URL
+            //if needed, put the downloader back here
+          h3 Bronze
+          h3 Silver
+          h3 Gold
+          h3 Platinum
+          h3 Enterprise
+      .layout__container.layout--half
+        .island
+          h2 Current Plan
+          div#downloader_application
+                    h4 Please select your files
+                    form#download_form(action="#")
+                      fieldset.fieldset
+                        field.field
+                          input.checkbox#cb1(type="checkbox" data-url="https://stuk.github.io/jszip/test/ref/complex_files/Franz Kafka - The Metamorphosis.epub" checked)
+                          label.checkbox__label(for='cb1') Basic Training
+                        field.field
+                          input.checkbox#cb2(type="checkbox" data-url="https://stuk.github.io/jszip/documentation/css/pygments.css" checked)
+                          label.checkbox__label(for='cb2') Intermediate Training 
+                        field.field
+                          input.checkbox#cb3(type="checkbox" data-url="https://stuk.github.io/jszip/dist/jszip.js") 
+                          label.checkbox__label(for='cb3') Advanced Training 
+                        field.field
+                          input.checkbox#cb4(type="checkbox" data-url="https://stuk.github.io/jszip/test/ref/all.zip") 
+                          label.checkbox__label(for='cb4') Grab all  
+                      button.btn.btn--primary(type="submit") Pack 'em !
+                    div#progress_bar
+                      div.progress-bar(role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; height:30px;")
+                    p.hide#result
+        .island
+          h2 Notes
+          p TBA
+      .island
+        h2 Add-ons
+        p TBA
+    //.layout.has-islands
+      .island
+        h2 Code
+        .demo__code
+          pre.
+    footer.footer
+      .footer__socials.theme--dark
+        h3 Join us on
+        a.footer__sociallink(href='https://www.youtube.com/c/dynatrace')
+          svg(viewbox='0 0 1792 1792')
+            title Youtube
+            path(d='M1280 896c0-24.7-10-42.7-30-54L738 522c-20.7-13.3-42.3-14-65-2-22 12-33 30.7-33 56v640c0 25.3 11 44 33 56 10.7 5.3 21 8 31 8 13.3 0 24.7-3.3 34-10l512-320c20-11.3 30-29.3 30-54zm512 0c0 64-.3 114-1 150s-3.5 81.5-8.5 136.5-12.5 104.2-22.5 147.5c-10.7 48.7-33.7 89.7-69 123s-76.7 52.7-124 58c-148 16.7-371.7 25-671 25s-523-8.3-671-25c-47.3-5.3-88.8-24.7-124.5-58s-58.8-74.3-69.5-123c-9.3-43.3-16.5-92.5-21.5-147.5S1.7 1082 1 1046s-1-86-1-150 .3-114 1-150 3.5-81.5 8.5-136.5S22 505.3 32 462c10.7-48.7 33.7-89.7 69-123s76.7-52.7 124-58c148-16.7 371.7-25 671-25s523 8.3 671 25c47.3 5.3 88.8 24.7 124.5 58s58.8 74.3 69.5 123c9.3 43.3 16.5 92.5 21.5 147.5s7.8 100.5 8.5 136.5 1 86 1 150z')
+        a.footer__sociallink(href='https://www.facebook.com/Dynatrace/')
+          svg(viewbox='0 1 23 23')
+            title Facebook
+            path(d='M9.6,20.1v-7.3H7.2V9.6h2.4V8.4c0-2.2,1.6-4.1,3.6-4.1h2.6v3.2h-2.6c-0.3,0-0.6,0.3-0.6,0.9v1.3 h3.2v3.2h-3.2v7.3H9.6z')
+        a.footer__sociallink(href='https://twitter.com/Dynatrace')
+          svg(viewbox='0 0 23 23')
+            title Twitter
+            path#twitter(d='M14.4,5.6c1.3,0,2,0.4,2.6,1c0.6,0,1.3-0.4,1.7-0.6c0.1-0.1,0.3-0.2,0.4-0.2 C19,6.5,18.6,7,18.1,7.4c-0.1,0.1-0.2,0.2-0.4,0.3v0c0.7,0,1.3-0.3,1.9-0.5v0c-0.3,0.5-0.7,1-1.1,1.3c-0.2,0.1-0.3,0.3-0.5,0.4 c0,0.8,0,1.5-0.2,2.1c-0.8,3.8-3,6.3-6.5,7.4C10,18.8,8,19,6.6,18.6c-0.7-0.2-1.4-0.4-2-0.6c-0.3-0.1-0.6-0.3-0.9-0.5 c-0.1-0.1-0.2-0.1-0.3-0.2c0.3,0,0.7,0.1,1.1,0c0.3-0.1,0.7,0,1-0.1c0.8-0.2,1.4-0.4,2-0.7c0.3-0.2,0.7-0.4,0.9-0.6 c-0.4,0-0.7-0.1-1-0.2c-1.1-0.4-1.7-1.1-2.1-2.1c0.3,0,1.3,0.1,1.5-0.1c-0.4,0-0.8-0.3-1.1-0.4C4.7,12.6,4,11.7,4,10.2 c0.1,0.1,0.2,0.1,0.3,0.2c0.2,0.1,0.4,0.1,0.7,0.2c0.1,0,0.3,0.1,0.5,0c0,0,0,0,0,0c-0.2-0.2-0.4-0.3-0.6-0.5 c-0.6-0.7-1.1-1.8-0.7-3c0.1-0.3,0.2-0.6,0.4-0.9c0,0,0,0,0,0c0.1,0.1,0.2,0.2,0.3,0.3c0.3,0.4,0.6,0.7,1,1c1.2,1,2.3,1.5,4.1,2 c0.4,0.1,1,0.2,1.5,0.2c-0.2-0.4-0.1-1.1,0-1.6c0.3-1.1,0.9-1.8,1.9-2.2c0.2-0.1,0.5-0.2,0.7-0.2C14.2,5.6,14.3,5.6,14.4,5.6z')
+        a.footer__sociallink(href='https://www.linkedin.com/company/dynatrace')
+          svg(viewbox='0 2 23 23')
+            title Linkedin
+            path(d='M7.5,19.1V9.8H4.4v9.4H7.5z M6,8.5c1.1,0,1.8-0.7,1.8-1.6 C7.7,6,7.1,5.3,6,5.3C4.9,5.3,4.2,6,4.2,6.9C4.2,7.8,4.9,8.5,6,8.5L6,8.5L6,8.5z')
+            path(d='M9.3,19.1h3.1v-5.2c0-0.3,0-0.6,0.1-0.8 c0.2-0.6,0.7-1.1,1.6-1.1c1.1,0,1.6,0.9,1.6,2.1v5h3.1v-5.4c0-2.9-1.5-4.2-3.6-4.2c-1.7,0-2.4,0.9-2.8,1.6h0V9.8H9.3 C9.3,10.7,9.3,19.1,9.3,19.1L9.3,19.1z')
+    script(src='//assets.dynatrace.com/groundhog/v1.0.0/js/main.js', type='text/javascript')
+    script(src="https://stuk.github.io/jszip/dist/jszip.js" type="text/javascript")
+    script(src="https://stuk.github.io/jszip-utils/dist/jszip-utils.js" type="text/javascript")
+    script(src="https://stuk.github.io/jszip/test/jquery-1.8.3.min.js" type="text/javascript")
+    script(src="https://stuk.github.io/jszip/vendor/FileSaver.js" type="text/javascript")
+    script(src="https://stuk.github.io/jszip/documentation/examples/downloader.js" type="text/javascript")
+    script(src="file:///C:/Users/Kayan.hales/Documents/coding/uawebapp/express_example/public/javascripts/toggle.js" type="text/javascript")
